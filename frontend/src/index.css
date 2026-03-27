@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.recharts-wrapper [tabindex]:focus,
+.recharts-wrapper [tabindex]:focus-visible {
+  outline: none !important;
+}
