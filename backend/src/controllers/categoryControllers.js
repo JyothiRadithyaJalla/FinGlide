@@ -50,7 +50,11 @@ export const getCategories = async(req,res) => {
 
 export const updateCategory = async(req,res) => {
   try{
-    const updatedCategory = await CategoryModel.findOneAndUpdate({_id:req.params.id,userId:req.user.userId},req.body,{new:true},{ runValidators: true });
+    const updatedCategory = await CategoryModel.findOneAndUpdate(
+      {_id:req.params.id, userId:req.user.userId},
+      req.body,
+      {new:true, runValidators: true}
+    );
     const userId=req.user.userId
 
     const categories = await CategoryModel.find({ userId });

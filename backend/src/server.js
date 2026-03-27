@@ -15,7 +15,7 @@ import { connectDB } from "./config/db.js";
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "https://finglide-gamma.vercel.app"], 
+  origin: ["http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "https://fin-glide.vercel.app"], 
   credentials: true,               
 }));
 app.use(express.json())
